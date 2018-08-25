@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hju-Xw-HhC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create User-->
+        <scene sceneID="Ijb-kR-DeY">
+            <objects>
+                <viewController id="fY2-Vq-Z9M" customClass="UserRegisterViewController" customModule="FirebaseMessageKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hkv-zf-Ay9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RpP-85-WRX">
+                                <rect key="frame" x="21" y="124" width="334" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Vc7-QH-xr7"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1b-q6-byi">
+                                <rect key="frame" x="125" y="233" width="125" height="58"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="kDV-XS-FsC"/>
+                                    <constraint firstAttribute="height" constant="58" id="njf-OF-6Rb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Create User">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButtonPressed" destination="fY2-Vq-Z9M" eventType="touchUpInside" id="Ycg-ts-jJg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65490196079999996" green="0.59999999999999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rRc-6w-aYZ" firstAttribute="trailing" secondItem="RpP-85-WRX" secondAttribute="trailing" constant="20" id="Kh2-q3-UeY"/>
+                            <constraint firstItem="RpP-85-WRX" firstAttribute="leading" secondItem="rRc-6w-aYZ" secondAttribute="leading" constant="21" id="QwQ-iB-Fgb"/>
+                            <constraint firstItem="RpP-85-WRX" firstAttribute="top" secondItem="rRc-6w-aYZ" secondAttribute="top" constant="60" id="Twb-nu-aaw"/>
+                            <constraint firstItem="x1b-q6-byi" firstAttribute="centerX" secondItem="Hkv-zf-Ay9" secondAttribute="centerX" id="Wer-z8-JrY"/>
+                            <constraint firstItem="x1b-q6-byi" firstAttribute="top" secondItem="RpP-85-WRX" secondAttribute="bottom" constant="45" id="bVd-IR-nU0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rRc-6w-aYZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create User" id="MDz-Nv-DeB"/>
+                    <connections>
+                        <outlet property="btnUserCreate" destination="x1b-q6-byi" id="e5g-gC-FsZ"/>
+                        <outlet property="userDisplayName" destination="RpP-85-WRX" id="cfW-4w-xcn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BBE-l9-cW8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2077.5999999999999" y="28.335832083958024"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xPU-lM-9I0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hju-Xw-HhC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y1q-vW-Oaw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fY2-Vq-Z9M" kind="relationship" relationship="rootViewController" id="1kA-pi-2uB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mWh-4p-XY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1138.4000000000001" y="28.335832083958024"/>
+        </scene>
+    </scenes>
+</document>

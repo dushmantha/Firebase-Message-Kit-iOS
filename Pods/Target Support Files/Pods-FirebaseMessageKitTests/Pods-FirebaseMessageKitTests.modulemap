@@ -1,0 +1,6 @@
+framework module Pods_FirebaseMessageKitTests {
+  umbrella header "Pods-FirebaseMessageKitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
